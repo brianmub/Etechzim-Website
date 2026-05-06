@@ -1,0 +1,37 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Ticker from './components/Ticker';
+import Services from './components/Services';
+import WhyEtechzim from './components/WhyEtechzim';
+import Products from './components/Products';
+import PCBuilder from './components/PCBuilder';
+import TechChallenge from './components/TechChallenge';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <>
+      <div className="grid-overlay"></div>
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <Ticker />
+          <Services />
+          <WhyEtechzim />
+          <Products />
+          <PCBuilder />
+          <TechChallenge />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+export default App;
