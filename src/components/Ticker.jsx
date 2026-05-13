@@ -4,7 +4,8 @@ const Ticker = () => {
   const items = [
     "AI Services", "Hologram Fan Displays", "Smartboards & AV", 
     "Custom Desktop Computers", "Network Infrastructure", 
-    "Software Development", "Internet Access Provision", "IoT & Asset Tracking"
+    "Software Development", "Internet Access Provision", "IoT & Asset Tracking",
+    "Driving Business Profitability", "Always On, Always There"
   ];
 
   // Repeat for seamless scrolling

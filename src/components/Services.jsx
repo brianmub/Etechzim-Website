@@ -30,7 +30,7 @@ const services = [
   {
     icon: "🖥️",
     title: "Custom Desktop Computers",
-    desc: "Made-to-order all-in-one desktops engineered for African conditions — optimised for local power environments and workloads."
+    desc: "Made-to-order all-in-one desktops engineered for maximum resilience — optimised for demanding power environments and business workloads."
   }
 ];
 
@@ -44,9 +44,9 @@ const Services = () => {
         className="mb-16"
       >
         <span className="text-accent font-bold tracking-wider uppercase text-sm mb-3 block">WHAT WE DO</span>
-        <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-6">Technology Services Built for Africa</h2>
+        <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-6">World-Class Technology for the Modern Enterprise</h2>
         <p className="text-muted text-lg max-w-2xl">
-          We bring world-class technology to Zimbabwean businesses, providing end-to-end solutions that modernize operations, engage customers, and build resilient infrastructure.
+          We bring world-class technology to forward-thinking businesses, providing end-to-end solutions that modernize operations, drive profitability, and build resilient infrastructure for the future.
         </p>
       </motion.div>
 

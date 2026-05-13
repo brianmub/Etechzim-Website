@@ -8,6 +8,7 @@ import Products from './components/Products';
 import PCBuilder from './components/PCBuilder';
 import TechChallenge from './components/TechChallenge';
 import Testimonials from './components/Testimonials';
+import Values from './components/Values';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -25,6 +26,7 @@ function App() {
           <Products />
           <PCBuilder />
           <TechChallenge />
+          <Values />
           <Testimonials />
           <Contact />
         </main>

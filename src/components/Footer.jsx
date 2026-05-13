@@ -5,9 +5,23 @@ const Footer = () => {
     <footer className="border-t border-borderLine bg-[#0a0c14] py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
-        {/* Logo */}
-        <div className="font-heading font-extrabold text-xl tracking-tighter text-textPrimary">
-          e<span className="text-accent">Tech</span>Zim
+        <div className="flex flex-col items-center md:items-start">
+          <div className="flex items-center gap-2">
+            <img 
+              src="/logo-transparent.png" 
+              alt="eTechZim Logo" 
+              className="h-8 w-auto object-contain"
+              onError={(e) => {
+                e.target.src = '/logo.png';
+              }}
+            />
+            <span className="hidden font-heading font-extrabold text-xl tracking-tighter text-textPrimary">
+              e<span className="text-accent">Tech</span>Zim
+            </span>
+          </div>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold mt-2 opacity-80">
+            Always On, Always There
+          </p>
         </div>
 
         {/* Links */}

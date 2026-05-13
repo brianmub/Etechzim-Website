@@ -5,42 +5,42 @@ const BASE_PRICE = 580;
 
 const OPTIONS = {
   useCase: [
-    { id: 'office', label: 'Office & Admin', price: 0 },
-    { id: 'creative', label: 'Creative & Design', price: 120 },
-    { id: 'gaming', label: 'Gaming & Media', price: 200 },
-    { id: 'server', label: 'Server / Kiosk', price: 80 }
+    { id: 'office', label: 'Office & Admin', price: 80 },
+    { id: 'creative', label: 'Creative & Design', price: 100 },
+    { id: 'gaming', label: 'Gaming & Media', price: 110 },
+    { id: 'server', label: 'Server / Kiosk', price: 120 }
   ],
   processor: [
-    { id: 'i3', label: 'Intel i3 — Entry', price: 0 },
-    { id: 'i5', label: 'Intel i5 — Mid-range', price: 80 },
-    { id: 'i7', label: 'Intel i7 — Performance', price: 180 },
-    { id: 'i9', label: 'Intel i9 — Pro', price: 320 }
+    { id: 'i3', label: 'Intel i3 — Entry', price: 200 },
+    { id: 'i5', label: 'Intel i5 — Mid-range', price: 220 },
+    { id: 'i7', label: 'Intel i7 — Performance', price: 250 },
+    { id: 'i9', label: 'Intel i9 — Pro', price: 350 }
   ],
   ram: [
-    { id: '8gb', label: '8GB', price: 0 },
-    { id: '16gb', label: '16GB', price: 60 },
-    { id: '32gb', label: '32GB', price: 130 },
-    { id: '64gb', label: '64GB', price: 260 }
+    { id: '8gb', label: '8GB', price: 100 },
+    { id: '16gb', label: '16GB', price: 120 },
+    { id: '32gb', label: '32GB', price: 160 },
+    { id: '64gb', label: '64GB', price: 190 }
   ],
   storage: [
-    { id: '256gb', label: '256GB SSD', price: 0 },
-    { id: '512gb', label: '512GB SSD', price: 40 },
+    { id: '256gb', label: '256GB SSD', price: 30 },
+    { id: '512gb', label: '512GB SSD', price: 60 },
     { id: '1tb', label: '1TB SSD', price: 90 },
     { id: '2tb', label: '2TB SSD', price: 170 }
   ],
   displaySize: [
-    { id: '21', label: '21"', price: 0 },
-    { id: '24', label: '24"', price: 50 },
-    { id: '27', label: '27"', price: 110 },
-    { id: '32', label: '32" 4K', price: 200 }
+    { id: '21', label: '21"', price: 80 },
+    { id: '24', label: '24"', price: 90 },
+    { id: '27', label: '27"', price: 120 },
+    { id: '32', label: '32" 4K', price: 150 }
   ],
   addons: [
     { id: 'ups', label: 'Built-in UPS', price: 35 },
-    { id: 'wifi6', label: 'Wi-Fi 6 Card', price: 25 },
+    { id: 'wifi6', label: 'Wi-Fi 6 Card', price: 10 },
     { id: 'gpu', label: 'Dedicated GPU', price: 55 },
     { id: 'webcam', label: 'HD Webcam', price: 20 },
-    { id: 'wireless', label: 'Wireless KB+Mouse', price: 30 },
-    { id: 'win11', label: 'Windows 11 Pro', price: 45 }
+    { id: 'wireless', label: 'Wireless KB+Mouse', price: 10 },
+    { id: 'win11', label: 'Windows 11 Pro', price: 15 }
   ]
 };
 
@@ -84,7 +84,7 @@ const PCBuilder = () => {
         <span className="text-accent font-bold tracking-wider uppercase text-sm mb-3 block">INTERACTIVE EXPERIENCE</span>
         <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Build Your Custom All-in-One PC</h2>
         <p className="text-muted text-lg max-w-2xl">
-          Configure your machine, see it take shape, and get an instant quote.
+          Configure your machine for maximum productivity and business profitability. See it take shape and get an instant quote.
         </p>
       </div>
 

@@ -9,8 +9,18 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         
         {/* Logo */}
-        <a href="#" className="font-heading font-extrabold text-2xl tracking-tighter text-textPrimary">
-          e<span className="text-accent">Tech</span>Zim
+        <a href="#" className="flex items-center gap-2 group">
+          <img 
+            src="/logo-transparent.png" 
+            alt="eTechZim Logo" 
+            className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+            onError={(e) => {
+              e.target.src = '/logo.png';
+            }}
+          />
+          <span className="hidden font-heading font-extrabold text-2xl tracking-tighter text-textPrimary">
+            e<span className="text-accent">Tech</span>Zim
+          </span>
         </a>
 
         {/* Desktop Nav */}

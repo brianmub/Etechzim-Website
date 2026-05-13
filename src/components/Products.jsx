@@ -13,6 +13,9 @@ const Products = () => {
       >
         <span className="text-accent font-bold tracking-wider uppercase text-sm mb-3 block">FEATURED SOLUTIONS</span>
         <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-6">Our Flagship Offerings</h2>
+        <p className="text-muted text-lg max-w-2xl">
+          We engineer high-impact solutions that don't just solve problems—they drive measurable business profitability and operational efficiency.
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8">
@@ -61,7 +64,7 @@ const Products = () => {
         <div className="flex flex-col gap-4 justify-center">
           {[
             { icon: "🤖", title: "AI-Powered Business Tools", desc: "Automate workflows and analyze data with custom AI pipelines." },
-            { icon: "🖥️", title: "eTechZim Custom All-in-One PCs", desc: "Built-in UPS and engineered for the African power grid." },
+            { icon: "🖥️", title: "eTechZim Custom All-in-One PCs", desc: "Built-in UPS and engineered for maximum reliability in any power environment." },
             { icon: "📡", title: "Managed Network Packages", desc: "End-to-end enterprise connectivity and Wi-Fi management." },
             { icon: "📺", title: "Interactive Smartboard Solutions", desc: "Enhance meetings and classrooms with collaborative displays." }
           ].map((prod, i) => (

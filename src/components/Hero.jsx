@@ -32,10 +32,14 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 border border-accent/30 rounded-full px-4 py-1.5 mb-8 bg-accent/5 backdrop-blur-sm">
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 border border-accent/30 rounded-full px-4 py-1.5 mb-4 bg-accent/5 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-xs font-bold uppercase tracking-widest text-accent">Zimbabwe's Tech Innovation Partner</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-accent">Leading Tech Innovation Partner</span>
           </motion.div>
+
+          <motion.p variants={itemVariants} className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold mb-8 opacity-70 pl-1">
+            Always On, Always There
+          </motion.p>
 
           <motion.h1 variants={itemVariants} className="text-[clamp(2.5rem,9vw,4.5rem)] lg:text-7xl font-heading font-extrabold leading-[1.2] mb-6">
             <span className="block pb-1 whitespace-nowrap">Future-Ready</span>
@@ -44,7 +48,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-muted text-lg md:text-xl leading-relaxed mb-10 max-w-[600px]">
-            eTechZim PVT LTD delivers cutting-edge technology — from AI services and holographic displays to custom computing infrastructure — built for Zimbabwe and beyond.
+            eTechZim PVT LTD delivers cutting-edge technology designed to drive business profitability — from AI automation and holographic displays to custom computing infrastructure built for excellence across the region and beyond.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-14">
