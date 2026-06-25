@@ -320,13 +320,25 @@ const WhatsAppWidget = () => {
                   </p>
                 </div>
               </div>
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="text-muted hover:text-textPrimary p-1.5 rounded-lg hover:bg-bg3 transition-colors"
-                aria-label="Close Chat"
-              >
-                <X size={18} />
-              </button>
+              <div className="flex items-center gap-1">
+                <a 
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 hover:text-green-400 p-1.5 rounded-lg hover:bg-bg3 transition-colors flex items-center justify-center"
+                  aria-label="Chat on WhatsApp"
+                  title="Chat on WhatsApp"
+                >
+                  <MessageCircle size={18} />
+                </a>
+                <button 
+                  onClick={() => setIsOpen(false)}
+                  className="text-muted hover:text-textPrimary p-1.5 rounded-lg hover:bg-bg3 transition-colors"
+                  aria-label="Close Chat"
+                >
+                  <X size={18} />
+                </button>
+              </div>
             </div>
 
             {/* Chat Messages Area */}
