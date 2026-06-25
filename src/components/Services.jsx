@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const services = [
@@ -60,7 +60,7 @@ const Services = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-bg2 group relative p-10 h-full flex flex-col hover:bg-bg3 transition-colors duration-500 overflow-hidden"
+              className="bg-bg2 group relative p-6 sm:p-10 h-full flex flex-col hover:bg-bg3 transition-colors duration-500 overflow-hidden"
             >
               {/* Hover Top Line */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -75,7 +75,7 @@ const Services = () => {
               
               {/* Learn More Link */}
               <div className="mt-auto">
-                <a href="#contact" className="text-accent font-semibold text-sm opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 inline-flex items-center">
+                <a href="#contact" className="text-accent font-semibold text-sm opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300 inline-flex items-center">
                   Learn more <span className="ml-2">→</span>
                 </a>
               </div>

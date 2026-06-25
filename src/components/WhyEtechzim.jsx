@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
@@ -47,7 +47,7 @@ const WhyEtechzim = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
           {[
             { icon: "⚡", title: "Fast deployment", text: "Rapid go-to-market execution." },
@@ -62,11 +62,11 @@ const WhyEtechzim = () => {
             </div>
           ))}
           
-          <div className="col-span-2 bg-accent/5 border border-accent/30 p-8 rounded-xl flex items-center gap-6">
+          <div className="col-span-1 sm:col-span-2 bg-accent/5 border border-accent/30 p-6 sm:p-8 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
             <span className="text-4xl">🚀</span>
             <div>
               <h4 className="font-heading font-bold text-xl text-accent mb-1">Enterprise-Grade Innovation</h4>
-              <p className="text-muted">Solutions architected to thrive in diverse and challenging operating environments, driving global business profitability through resilient technology.</p>
+              <p className="text-muted text-sm sm:text-base">Solutions architected to thrive in diverse and challenging operating environments, driving global business profitability through resilient technology.</p>
             </div>
           </div>
         </motion.div>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const testimonials = [
@@ -62,7 +62,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="group relative bg-[#0a0c14] border border-borderLine p-8 rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-[0_0_30px_rgba(0,212,255,0.05)] transition-all flex flex-col h-full"
+            className="group relative bg-[#0a0c14] border border-borderLine p-6 sm:p-8 rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-[0_0_30px_rgba(0,212,255,0.05)] transition-all flex flex-col h-full"
           >
             {/* Top outline gradient line */}
             <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-gradient opacity-50 group-hover:opacity-100 transition-opacity"></div>

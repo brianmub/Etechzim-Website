@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -25,7 +25,7 @@ const Products = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-bg3 border border-borderLine rounded-3xl p-10 relative overflow-hidden flex flex-col justify-between group"
+          className="bg-bg3 border border-borderLine rounded-3xl p-6 sm:p-10 relative overflow-hidden flex flex-col justify-between group"
         >
           {/* Decorative Glow */}
           <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-[80px] pointer-events-none"></div>

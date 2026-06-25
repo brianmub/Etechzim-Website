@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,13 +6,13 @@ const Contact = () => {
     service: '', budget: '', message: '', consent: false
   });
   
-  const [errors, setErrors] = useState({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  // Validate form
-  const validate = () => {
+  // Compute validation errors dynamically
+  const getErrors = (force = false) => {
+    if (!hasSubmitted && !force) return {};
     const newErrors = {};
     if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
     if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
@@ -26,20 +25,17 @@ const Contact = () => {
     if (formData.message.length < 20) newErrors.message = "Message must be at least 20 characters";
     
     if (!formData.consent) newErrors.consent = "You must agree to be contacted";
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return newErrors;
   };
 
-  useEffect(() => {
-    if (hasSubmitted) validate();
-  }, [formData, hasSubmitted]);
+  const errors = getErrors();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setHasSubmitted(true);
     
-    if (validate()) {
+    const activeErrors = getErrors(true);
+    if (Object.keys(activeErrors).length === 0) {
       setIsSubmitting(true);
       // Simulate API call
       // TODO: Replace with Formspree or real fetch call
@@ -75,7 +71,7 @@ const Contact = () => {
         <div className="relative bg-bg3 border border-borderLine rounded-2xl overflow-hidden shadow-xl">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-gradient"></div>
           
-          <div className="p-8 md:p-12 min-h-[600px] flex flex-col justify-center">
+          <div className="p-5 sm:p-12 min-h-[600px] flex flex-col justify-center">
             {isSuccess ? (
               <div className="text-center animate-in fade-in zoom-in duration-500">
                 <div className="text-7xl mb-6">✅</div>

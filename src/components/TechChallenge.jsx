@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, RotateCcw } from 'lucide-react';
 
@@ -113,7 +113,7 @@ const TechChallenge = () => {
           />
         </div>
 
-        <div className="p-8 md:p-12 flex-grow flex flex-col justify-center">
+        <div className="p-5 sm:p-12 flex-grow flex flex-col justify-center">
           <AnimatePresence mode="wait">
             {!isResult ? (
               <motion.div 

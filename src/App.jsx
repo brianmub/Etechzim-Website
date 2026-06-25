@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Ticker from './components/Ticker';
@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials';
 import Values from './components/Values';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <WhatsAppWidget />
       </div>
     </>
   );

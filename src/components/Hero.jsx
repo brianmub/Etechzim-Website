@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -41,8 +41,8 @@ const Hero = () => {
             Always On, Always There
           </motion.p>
 
-          <motion.h1 variants={itemVariants} className="text-[clamp(2.5rem,9vw,4.5rem)] lg:text-7xl font-heading font-extrabold leading-[1.2] mb-6">
-            <span className="block pb-1 whitespace-nowrap">Future-Ready</span>
+          <motion.h1 variants={itemVariants} className="text-[clamp(2.3rem,8vw,4.5rem)] lg:text-7xl font-heading font-extrabold leading-[1.2] mb-6">
+            <span className="block pb-1 sm:whitespace-nowrap">Future-Ready</span>
             <span className="block w-fit text-gradient pb-2 pr-[0.1em] overflow-visible">Technology</span>
             <span className="block pt-1">Solutions</span>
           </motion.h1>
@@ -60,18 +60,18 @@ const Hero = () => {
             </a>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex items-center gap-8 md:gap-12 pt-8 border-t border-borderLine">
+          <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 border-t border-borderLine">
             <div>
-              <h4 className="text-3xl font-heading font-bold text-textPrimary">6+</h4>
-              <p className="text-sm text-muted mt-1">Technology verticals</p>
+              <h4 className="text-2xl sm:text-3xl font-heading font-bold text-textPrimary">6+</h4>
+              <p className="text-xs sm:text-sm text-muted mt-1">Technology verticals</p>
             </div>
             <div>
-              <h4 className="text-3xl font-heading font-bold text-textPrimary">100%</h4>
-              <p className="text-sm text-muted mt-1">Local expertise</p>
+              <h4 className="text-2xl sm:text-3xl font-heading font-bold text-textPrimary">100%</h4>
+              <p className="text-xs sm:text-sm text-muted mt-1">Local expertise</p>
             </div>
-            <div>
-              <h4 className="text-3xl font-heading font-bold text-textPrimary">24/7</h4>
-              <p className="text-sm text-muted mt-1">Technical support</p>
+            <div className="col-span-2 sm:col-span-1">
+              <h4 className="text-2xl sm:text-3xl font-heading font-bold text-textPrimary">24/7</h4>
+              <p className="text-xs sm:text-sm text-muted mt-1">Technical support</p>
             </div>
           </motion.div>
         </motion.div>

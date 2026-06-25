@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const BASE_PRICE = 580;
 
@@ -79,7 +78,7 @@ const PCBuilder = () => {
   const hasUPS = config.addons.some(a => a.id === 'ups');
 
   return (
-    <section id="builder" className="py-24 px-6 relative max-w-7xl mx-auto border-t border-borderLine">
+    <section id="builder" className="pt-24 pb-32 lg:pb-24 px-6 relative max-w-7xl mx-auto border-t border-borderLine">
       <div className="mb-16">
         <span className="text-accent font-bold tracking-wider uppercase text-sm mb-3 block">INTERACTIVE EXPERIENCE</span>
         <h2 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Build Your Custom All-in-One PC</h2>
@@ -152,8 +151,8 @@ const PCBuilder = () => {
         </div>
 
         {/* RIGHT - Live Preview Panel */}
-        <div className="lg:sticky lg:top-24 h-max">
-          <div className="bg-bg3 border border-borderLine rounded-3xl p-8 relative overflow-hidden shadow-2xl">
+        <div id="builder-preview" className="lg:sticky lg:top-24 h-max scroll-mt-24">
+          <div className="bg-bg3 border border-borderLine rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-2xl">
             {/* SVG Illustration */}
             <div className="w-full aspect-[4/3] relative mb-8 flex justify-center items-center">
               <svg viewBox="0 0 400 300" className="w-full h-full drop-shadow-xl overflow-visible">
@@ -234,6 +233,20 @@ const PCBuilder = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Sticky Bottom Bar for Mobile viewports */}
+      <div className="fixed bottom-0 left-0 w-full z-40 bg-[#0c0f1a]/95 backdrop-blur-md border-t border-borderLine/80 p-4 flex justify-between items-center lg:hidden shadow-[0_-8px_30px_rgba(0,0,0,0.5)] animate-in slide-in-from-bottom duration-300">
+        <div>
+          <span className="text-[10px] text-muted uppercase tracking-wider font-bold block">Estimated Price</span>
+          <span className="text-2xl font-heading font-extrabold text-accent">${totalPrice}</span>
+        </div>
+        <a 
+          href="#builder-preview" 
+          className="bg-accent text-black font-bold px-5 py-2.5 rounded-lg text-xs tracking-wide uppercase transition-all hover:bg-opacity-90 shadow-[0_0_15px_rgba(0,212,255,0.15)]"
+        >
+          View Specs & Quote
+        </a>
       </div>
     </section>
   );

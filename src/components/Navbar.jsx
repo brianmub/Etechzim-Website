@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,17 +46,44 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Drawer */}
-      {isOpen && (
-        <div className="md:hidden fixed top-[70px] left-0 w-full h-screen bg-bg2 border-t border-borderLine p-6 flex flex-col gap-6">
-          <a href="#services" onClick={() => setIsOpen(false)} className="text-xl font-heading">Services</a>
-          <a href="#why" onClick={() => setIsOpen(false)} className="text-xl font-heading">About</a>
-          <a href="#products" onClick={() => setIsOpen(false)} className="text-xl font-heading">Products</a>
-          <a href="#builder" onClick={() => setIsOpen(false)} className="text-xl font-heading">PC Builder</a>
-          <a href="#contact" onClick={() => setIsOpen(false)} className="mt-4 bg-accent text-black text-center font-semibold px-5 py-3 rounded-md">
-            Get in touch
-          </a>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-bg2/95 backdrop-blur-md border-t border-borderLine p-8 flex flex-col justify-between z-40 overflow-y-auto"
+          >
+            <div className="flex flex-col gap-5 mt-4">
+              <a href="#services" onClick={() => setIsOpen(false)} className="text-2xl font-heading font-bold text-textPrimary hover:text-accent transition-colors flex items-center justify-between py-3 border-b border-borderLine/30">
+                <span>Services</span>
+                <span className="text-xs text-accent font-sans">01</span>
+              </a>
+              <a href="#why" onClick={() => setIsOpen(false)} className="text-2xl font-heading font-bold text-textPrimary hover:text-accent transition-colors flex items-center justify-between py-3 border-b border-borderLine/30">
+                <span>About</span>
+                <span className="text-xs text-accent font-sans">02</span>
+              </a>
+              <a href="#products" onClick={() => setIsOpen(false)} className="text-2xl font-heading font-bold text-textPrimary hover:text-accent transition-colors flex items-center justify-between py-3 border-b border-borderLine/30">
+                <span>Products</span>
+                <span className="text-xs text-accent font-sans">03</span>
+              </a>
+              <a href="#builder" onClick={() => setIsOpen(false)} className="text-2xl font-heading font-bold text-textPrimary hover:text-accent transition-colors flex items-center justify-between py-3 border-b border-borderLine/30">
+                <span>PC Builder</span>
+                <span className="text-xs text-accent font-sans">04</span>
+              </a>
+            </div>
+            
+            <a 
+              href="#contact" 
+              onClick={() => setIsOpen(false)} 
+              className="mt-6 w-full bg-accent text-black text-center font-bold px-5 py-4 rounded-xl shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:bg-opacity-95 transition-all text-lg"
+            >
+              Get in touch
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
