@@ -159,6 +159,10 @@ const WhatsAppWidget = () => {
     
     const rules = [
       {
+        keywords: ['service', 'services', 'offer', 'provide', 'do', 'about', 'help', 'products'],
+        response: "eTechZim offers a range of technology services in Zimbabwe: \n\n🤖 AI Services & Business Automation\n🌀 3D Hologram Fan Displays (expos & retail)\n📺 Smartboards & AV Boardroom Systems\n💻 Bespoke Software Development\n🌐 Network & Internet Infrastructure\n🖥️ Custom All-in-One PCs (with built-in UPS)\n\nFeel free to ask me for details on any of these!"
+      },
+      {
         keywords: ['discount', 'bulk', 'order', 'buy', 'purchase', 'deal', 'hire', 'rent', 'quantity'],
         response: "For discounts, bulk orders, or custom purchases, please connect directly with our support team on WhatsApp! [WHATSAPP_REFERRAL]"
       },
